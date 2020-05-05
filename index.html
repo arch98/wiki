@@ -36,23 +36,41 @@
        <h2 id="desc">Sunny</h2>
     </div>
     </div>
-    <div class="col-12 col-sm-3">
-    </div>
+     <div class="col-12 col-sm-3">
+      </div>
   </div>
+   
+   <div class ="container">
+      <div class ="row">
+        <div class ="col-12 col-sm-3">
+        </div>
+        <div class = "col-12 col-sm-6">
+          <div class ="imp">
+            <form>
+          <input type="button" value="Toggle">
+         </form>
+    </div>
+    </div>
+     <div class="col-12 col-sm-3">
+      </div>
+  </div>
+</div>
+
+
   </main>
 
      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script>
+  <script>
       $(document).ready(function(){
             
             var URL = "https://fcc-weather-api.glitch.me/api/current?lat=8.5&lon=76.9";
 
             $.getJSON(URL,function(data){
-                  console.log(data);
                   u(data);
+                  msg(data);
             });
        
           function u(data){
@@ -70,8 +88,7 @@
             $('#temp').html(t);
             $('#desc').html(desc);
           }
-
-
+          
       });
       </script>
 
