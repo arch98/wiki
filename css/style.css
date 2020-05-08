@@ -1,5 +1,5 @@
 h1{
-	padding:10px 10px 10px 10px;
+	padding:30px 10px 10px 10px;
 }
 #pic{
 	padding:10px 10px 10px 10px;
@@ -24,4 +24,22 @@ h1{
 
 .temper{
 	font-size:3rem;
+}
+
+.navbar-dark{
+	background-color:black;
+}
+
+.jumbotron{
+	background: #2e2f34;
+  color: #fff;
+}
+
+#wes{
+    font-color:white;
+}
+
+body{
+	background: #2e2f34;
+  color: #fff;
 }
