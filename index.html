@@ -32,7 +32,10 @@
           <div class ="box">
       <h1 id="city">Tvm</h1>
       <img src="#" alt="icon" id="pic">
-      <h1 id="temp">19</h1>
+      <div class ="temper" id="tbox">
+      <span id="temp"  class ="cel">19</span>
+      <span id="deg">&#8451;</span>
+  </div>
        <h2 id="desc">Sunny</h2>
     </div>
     </div>
@@ -47,7 +50,7 @@
         <div class = "col-12 col-sm-6">
           <div class ="imp">
             <form>
-          <input type="button" value="Toggle">
+          <input type="button" value="Toggle" id="tcf">
          </form>
     </div>
     </div>
@@ -70,7 +73,6 @@
 
             $.getJSON(URL,function(data){
                   u(data);
-                  msg(data);
             });
        
           function u(data){
@@ -88,9 +90,31 @@
             $('#temp').html(t);
             $('#desc').html(desc);
           }
-          
+
+           $("#tcf").click(function(){
+                
+                 $.getJSON(URL,function(data){
+                       var t = Math.round(data.main.temp);
+                       if($("#temp").hasClass('cel')){
+                	      var y = Math.round((t*9/5)+32);
+                	      $("#temp").html(y);
+                	      $("#temp").removeClass('cel');
+                	      $("temp").addClass('far');
+                	      $("#deg").html("&#8457;");
+                  }else{
+                  	  $("#temp").html(t);
+                  	  $("#temp").removeClass('far');
+                  	  $("#temp").addClass('cel');
+                      $("#deg").html("&#8451;");
+                  }
+
+                   });
+                
+                
+           });          
       });
       </script>
+
 
 	</body>
 </html>
