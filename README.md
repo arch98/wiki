@@ -15,3 +15,6 @@ The app displays:
 3) description of weather
 4) an icon or background image depicting the weather.
 
+![Alt text](/screencapture-localhost-3000-2020-05-08-16_23_01.png?raw=true "Application in large screen")
+
+![Alt text](/screencapture-localhost-3000-2020-05-08-16_23_30.png?raw=true "Application in Mobile screen")
